@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Snack Scoop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#About">About us</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#order-form">Order Form</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="About">
+            <h2>About us</h2>
+            <div class="About">
+                <div class="About us">
+            <p>This is cozy, small, informal restaurant where small meals can be eaten or bought to take away. We provide you a delicious and affortable snacks.</p>
+    </section>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu">
+                <div class="menu-item">
+            <table>
+                <thead>
+                    <tr>
+                        <th>food Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dumpling</td>
+                        <td>$10</td>
+                        <td>A dumpling is a versatile dish consisting of dough filled with various ingredients, often steamed, boiled, or fried.</td>
+                        <td><img src="https://images.squarespace-cdn.com/content/v1/55be995de4b071c106b3b4c0/6af0cbeb-8a58-4993-ab68-8e9919d6d04c/Salmon+Dumplings-6.jpg" alt="Dumpling" width="100"></td>
+                        <tr>
+                            <td>Chicken wings</td>
+                            <td>$11.00</td>
+                            <td>Chicken wings are crispy,flavorful, tender pieces of chicken coated in sauces(No extra charges for Sauce).</td>
+                            <td><img src="https://www.allrecipes.com/thmb/AtViolcfVtInHgq_mRtv4tPZASQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-187822-baked-chicken-wings-4x3-5c7b4624c8554f3da5aabb7d3a91a209.jpg" alt="Burito" width="100"></td>
+                            <tr>
+                                <td>Corn Dog</td>
+                                <td>$9.5</td>
+                                <td>A corn dog is a deep-fried hot dog coated in a thick cornmeal batter, typically served on a stick for easy eating. we have three type of corn dog; Cheese, chicken and potato coated.</td>
+                                <td><img src="https://www.emmymade.com/wp-content/uploads/2021/11/korean-corn-dogs.jpeg" alt="Corn Dog" width="100"></td>
+                                <tr>
+                                    <td>Chicken wrap</td>
+                                    <td>$8.99</td>
+                                    <td>A chicken wrap is a portable meal made with grilled or cooked chicken, fresh vegetables, and sauces, all rolled in a tortilla or flatbread.</td>
+                                    <td><img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2012/9/25/0/ZB0307H_grilled-chicken-caesar-wrap_s4x3.jpg" alt="Chicken wrap" width="100"></td>
+                                    <tr>
+                                     <td>Cheeseburger</td>
+                                     <td>$10.99</td>
+                                      <td>A cheeseburger is a hearty sandwich featuring a grilled chicken patty topped with melted cheese, usually served in a bun with various condiments and toppings.</td>
+                                     <td><img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg" alt="Cheeseburger" width="100"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="order-form">
+            
+    <h2>Order Form</h2>
+    <div class="order-form">
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" name="customer-email" required>
+
+
+            <label for="item">Select Menu Item:</label>
+            <select id="item" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Dumplings">Dumplings</option>
+                <option value="Chicken wings">Chicken wings</option>
+                <option value="Corn Dog">Corn Dog</option>
+                <option value="Chicken wrap">Chicken wrap</option>
+                <option value="Cheeseburger">Cheeseburger</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const item = document.getElementById('item').value;
+            const quantity = document.getElementById('quantity').value;
+
+            alert(`Thank you, ${name}! You've ordered ${quantity} x ${item}.`);
+        });
+    </script>
+    <section>
+        <footer>
+            <p>&copy; Snacks Scoop. All rights reserved.</p>
+        </footer>
+    
+    </section>
+</body>
+</html>
